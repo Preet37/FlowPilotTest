@@ -1,0 +1,16 @@
+# Default: normalize to LF in repo
+*          text=auto eol=lf
+
+# Windows-only scripts can use CRLF
+*.ps1      text eol=crlf
+*.bat      text eol=crlf
+
+# Common text files pinned to LF
+*.sh       text eol=lf
+*.py       text eol=lf
+*.json     text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.md       text eol=lf
+*.env      text eol=lf
+*.example  text eol=lf

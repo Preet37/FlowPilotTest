@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 .venv/
-.env
+
 
 # Google
 backend/token.json
@@ -11,3 +11,18 @@ backend/credentials.json
 # OS
 .DS_Store
 .vercel
+Thumbs.db
+.vscode/
+
+#DB/ Runtime
+
+flowpilot.DB
+*.sqlite
+logs/
+agent_traces/
+
+#local env/config
+.env
+server/.env
+server/token.json
+server/credentials.json
