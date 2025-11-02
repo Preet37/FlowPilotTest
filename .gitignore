@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Google
+backend/token.json
+backend/credentials.json
+
+# OS
+.DS_Store
+.vercel

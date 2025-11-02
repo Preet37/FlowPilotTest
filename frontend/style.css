@@ -1,0 +1,155 @@
+:root {
+    --bg-color: #000;
+    --card-color: #1c1c1e;
+    --text-primary: #fff;
+    --text-secondary: #8e8e93;
+    --accent-blue: #0a84ff;
+    --accent-red: #ff3b30;
+    --accent-orange: #ff9500;
+    --accent-green: #34c759;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    -webkit-tap-highlight-color: transparent;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 10px 20px;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+header h1 { 
+    font-size: 30px; 
+    font-weight: 700; 
+    margin: 0; 
+}
+.header-controls {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.header-button {
+    background: none; border: none; color: var(--accent-blue);
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 15px;
+    white-space: nowrap; 
+}
+.header-button:disabled {
+    color: var(--text-secondary);
+}
+h2 { font-size: 22px; font-weight: 600; padding: 0 20px; margin: 10px 0; }
+.clarify-section { margin-bottom: 20px; }
+.clarify-list .clarify-item {
+    background-color: var(--card-color);
+    margin: 0 15px 10px 15px; padding: 15px; border-radius: 12px;
+}
+.clarify-item p { margin: 0 0 10px 0; font-weight: 500; }
+.clarify-item .clarify-input {
+    width: calc(100% - 70px); padding: 8px 12px; border-radius: 8px;
+    border: 1px solid var(--text-secondary); background-color: #3a3a3c;
+    color: var(--text-primary); font-size: 16px; margin-right: 10px;
+}
+.clarify-item .clarify-save {
+    padding: 8px 12px; border: none; border-radius: 8px;
+    background-color: var(--accent-blue); color: var(--text-primary);
+    font-size: 16px; font-weight: 600; cursor: pointer;
+}
+.task-list {
+    list-style: none; padding: 0; margin: 10px 15px;
+    background-color: var(--card-color); border-radius: 12px;
+}
+.task-list li.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; 
+    border-bottom: 1px solid #3a3a3c;
+}
+.task-list li:last-child { border-bottom: none; }
+.task-list li {
+    padding: 15px;
+    color: var(--text-secondary);
+}
+.task-content { flex-grow: 1; overflow: hidden; }
+.task-content .title { 
+    font-size: 17px; 
+    font-weight: 500; 
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.task-content .due { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+.done-button {
+    background: none;
+    border: 2px solid var(--text-secondary);
+    color: var(--text-secondary);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+.done-button:hover {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+    color: var(--text-primary);
+}
+.text-input-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    border-top: 1px solid var(--card-color);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: env(safe-area-inset-bottom, 10px);
+}
+#text-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--card-color);
+    color: var(--text-primary);
+    font-size: 16px;
+}
+#text-input:disabled {
+    background-color: #0c0c0c;
+    color: var(--text-secondary);
+}
+#send-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#send-button:disabled {
+    background-color: var(--text-secondary);
+}
